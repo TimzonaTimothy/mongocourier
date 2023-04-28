@@ -66,14 +66,14 @@ class Courier(models.Model):
 	# 	super(Courier, self).save()
 
 class Transaction(models.Model):
-	parcel = models.ForeignKey(Courier, on_delete=models.CASCADE)
+	parcel = models.OneToOneField(Courier, on_delete=models.CASCADE)
 	activity = models.CharField(max_length=255, null=True, blank=True)
-	location = models.CharField(max_length=255, null=True, blank=True)
+	location = models.CharField(max_length=255, null=True, blank=False)
 	details = models.CharField(max_length=225, null=True, blank=True)
 	date = models.DateTimeField(default=timezone.datetime.now, blank = True, null=True)
 
 	def __str__(self):
-		return  self.activity
+		return  self.location
 
 	def packacke_date(self):
          return self.date.strftime('%B %d %Y')

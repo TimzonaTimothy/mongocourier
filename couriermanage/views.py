@@ -12,6 +12,9 @@ from django.urls import reverse
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
+from django.core.exceptions import ObjectDoesNotExist
+import folium
+import geocoder
 from .models import *
 
 def home(request):
@@ -49,12 +52,23 @@ def listing(request, id=None):
 
     listing = get_object_or_404(Courier, id=id)
     
-    
     # transaction = get_object_or_404(Transaction, parcel=listing.id)
+	
     t = Transaction.objects.all().filter(parcel=listing.id)
+    
+    adr = Transaction.objects.get()
+    location = geocoder.osm(adr.location)
+    lat = location.lat
+    lng = location.lng
+    country = location.country
+    m = folium.Map(location=[19, -12], zoom_start=2)
+    folium.Marker([lat, lng], tooltip='Click for more',
+                  popup=country).add_to(m)
+    m = m._repr_html_()
     context = {
         'listing':listing,
 		'transactions':t,
+		'm': m,
 		}
 
     return render(request, 'box/listing.html', context)
