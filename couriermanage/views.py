@@ -61,7 +61,7 @@ def listing(request, id=None):
     lat = location.lat
     lng = location.lng
     country = location.country
-    m = folium.Map(location=[19, -12], zoom_start=2)
+    m = folium.Map(location=[lat, lng], zoom_start=2)
     folium.Marker([lat, lng], tooltip='Click for more',
                   popup=country).add_to(m)
     m = m._repr_html_()
