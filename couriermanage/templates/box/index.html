@@ -7,8 +7,24 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left:30px;
-    margin-top: 5px;
+    
+}
+
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, 0px); }    
+}
+</style>
+
+<style>
+  .single_service_text{  
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
 }
 
 
@@ -175,7 +191,7 @@
     <div class="row">
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
-          <img src="{% static 'box/img/icon/process_1.svg' %}" alt="" />
+          <img src="{% static 'box/truck.jpeg' %}" alt="" />
           <h4>Trucks</h4>
           <p style="text-align: left;">
             
@@ -184,21 +200,21 @@
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
-          <img src="{% static 'box/img/icon/process_2.svg' %}" alt="" />
+          <img src="{% static 'box/plane.jpg' %}" alt="" />
           <h4>Air</h4>
           <p style="text-align: left;">MONGOCOURIER Couriers provides worldwide network for all your air freight needs.</p>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
-          <img src="{% static 'box/img/icon/process_3.svg' %}" alt="" />
+          <img src="{% static 'box/rail.jpeg' %}" alt="" />
           <h4>Railway</h4>
           <p style="text-align: left;">MONGOCOURIER Couriers Company rail freight services offer a highly flexible and a cost-effective solution to your rail transport requirements.</p>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
-          <img src="{% static 'box/img/icon/process_4.svg' %}" alt="" />
+          <img src="{% static 'box/ship.jpg' %}" alt="" />
           <h4>Ship</h4>
           <p style="text-align: left;">MONGOCOURIER Couriers Company having its strong alliance with shipping companies and global freight partners enables to offer cost effective ocean freight.</p>
         </div>
