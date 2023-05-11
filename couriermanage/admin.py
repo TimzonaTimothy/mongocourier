@@ -15,8 +15,8 @@ class TransactionAdmin(admin.ModelAdmin):
 	list_per_page = 20
 	
 
-admin.site.site_header = 'EXPRESS-MONGO-ADMIN'
-admin.site.site_title = 'EXPRESS-MONGO-ADMINISTRATION'
+admin.site.site_header = 'FIDELITYXPRESS-ADMIN'
+admin.site.site_title = 'FIDELITYXPRESS-ADMINISTRATION'
 admin.site.register(Courier, CourierAdmin)
 admin.site.register(Transaction, TransactionAdmin)
 admin.site.register(Contact)

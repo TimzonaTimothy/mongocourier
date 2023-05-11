@@ -33,6 +33,8 @@ def home(request):
 		return render(request, 'box/index.html', {})
 
 def search(request):
+	# query = request.GET.get('q')
+	# couriers = Courier.objects.filter(tracking_id__icontains=query)
 	
 	couriers = Courier.objects.filter()
 	
@@ -44,7 +46,7 @@ def search(request):
 	paginator = Paginator(couriers, 10)
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
-	return render(request,'box/search.html', {'page_obj':page_obj})
+	return render(request,'box/search.html', {'page_obj':couriers})
 
 
 

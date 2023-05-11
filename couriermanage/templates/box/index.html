@@ -41,19 +41,31 @@
       <div class="col-lg-6">
         <div class="banner_text">
           <div class="banner_text_iner">
-            <h1>
-              WELCOME <br />
-              TO MONGOCOURIER
-            </h1>
+            <h2 style="color:white;"> FIDELITYXPRESS
+              <br />
+             
+            </h2>
             <p>
-              Fast delivery <br />
-              for your goods business
+              WE ARE FIDELITY,<br />
+              WE KEEP TO OUR WORDS
             </p>
-            <!-- <div class="input-phone"></div> -->
+            <form  action="{% url 'search' %}" class="search" method="GET" style="padding-top: 5px;">
+              <div class="">
+                  <div class="input-group" style="display: flex;padding: 10px 22px; width: 100%;align-items:left;">
+                      <input id="inp-search" style="border-color: #f39c12;" type="text" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Your Parcel ID" required>
+                      
+                      
+                        <button id="bt" class="btn btn-primary" style="background-color:#6345fe ;" type="submit">
+                          <span class="txt" style="color:white;font-weight: light;">Track</span>
+                        </button>
+                      
+                  </div>
+              </div>
+          </form>
           </div>
         </div>
       </div>
-      <div class="pick_up_text">
+      {% comment %} <div class="pick_up_text">
         <div class="pickup_text_iner">
           <p>Logistics World</p>
           <h3>Get Pick Up Here</h3>
@@ -61,7 +73,7 @@
         <div class="pickup_text_arrow">
           <img src="{% static 'box/img/icon/right-arrow.svg' %}" alt="" />
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </div>
 </section>
@@ -79,7 +91,7 @@
         <div class="about_part_text">
           <div class="about_text_iner">
             <p>
-              MONGOCOURIER Couriers Service and Shipping Company is a one-stop
+              FIDELITYXPRESS Service and Shipping Company is a one-stop
               freight and logistics solution, providing services to companies of
               all sizes, be it a small delivery across town or an industrial
               shipment to the other side of the globe.
@@ -105,15 +117,15 @@
     <div class="row justify-content-between">
       <div class="col-lg-5">
         <div class="service_text">
-          <h2>MONGOCOURIER <br /><span> Delivery Services </span></h2>
+          <h2>FIDELITYXPRESS <br /><span> Delivery Services </span></h2>
           <p>
-            MONGOCOURIER Couriers & Shipping provides you with a cost effective
+            FIDELITYXPRESS provides you with a cost effective
             Total Logistics & Transportation Services that are tailor- made to
             meet your precise requirements, leaving you free to stay focused on
             your core business activities.
           </p>
           <p>
-            MONGOCOURIER Couriers global network relying on its overseas
+            FIDELITYXPRESS global network relying on its overseas
             partners with whom we have built up a confidence and trust that has
             resulted fruitful tie up.
           </p>
@@ -195,28 +207,28 @@
           <h4>Trucks</h4>
           <p style="text-align: left;">
             
-            MONGOCOURIER Couriers Company land freight services offer a highly flexible and a cost-effective solution to your road transport requirements.</p>
+            FIDELITYXPRESS land freight services offer a highly flexible and a cost-effective solution to your road transport requirements.</p>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
           <img src="{% static 'box/plane.jpg' %}" alt="" />
           <h4>Air</h4>
-          <p style="text-align: left;">MONGOCOURIER Couriers provides worldwide network for all your air freight needs.</p>
+          <p style="text-align: left;">FIDELITYXPRESS provides worldwide network for all your air freight needs.</p>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
           <img src="{% static 'box/rail.jpeg' %}" alt="" />
           <h4>Railway</h4>
-          <p style="text-align: left;">MONGOCOURIER Couriers Company rail freight services offer a highly flexible and a cost-effective solution to your rail transport requirements.</p>
+          <p style="text-align: left;">FIDELITYXPRESS rail freight services offer a highly flexible and a cost-effective solution to your rail transport requirements.</p>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
         <div class="single_deliverie_process">
           <img src="{% static 'box/ship.jpg' %}" alt="" />
           <h4>Ship</h4>
-          <p style="text-align: left;">MONGOCOURIER Couriers Company having its strong alliance with shipping companies and global freight partners enables to offer cost effective ocean freight.</p>
+          <p style="text-align: left;">FIDELITYXPRESS having its strong alliance with shipping companies and global freight partners enables to offer cost effective ocean freight.</p>
         </div>
       </div>
     </div>

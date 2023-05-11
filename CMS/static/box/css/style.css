@@ -1954,7 +1954,7 @@ ul {
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
-    left: 0;
+    right: 15px;
     top: 10px;
   }
   /* line 229, ../../01 cl html template/New folder/May 2019/177 Logistics/Logistic Template/sass/_menu.scss */
@@ -2019,7 +2019,7 @@ ul {
 .banner_part {
   height: 835px;
   position: relative;
-  background-image: url(../img/banner_bg.png);
+  background-image: url(../img/main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5381,7 +5381,7 @@ h6 {
 
 /* line 1, ../../01 cl html template/New folder/May 2019/177 Logistics/Logistic Template/sass/_breadcrumb.scss */
 .breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
+  background-image: url("../img/about.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5485,3 +5485,40 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.search {
+  font-weight: bold;
+}
+#inp-search{
+  width: 80%;
+}
+#bt{
+  width: 20%
+}
+
+/* Display input and submit button in column on mobile devices */
+@media only screen and (max-width: 767px) {
+  
+  .input-group {
+    flex-direction: column;
+    align-items: left;
+    padding: 0px;
+    width: 100%;
+  }
+  #inp-search{
+    width: 100%;
+  }
+
+  #bt {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .navbar-brand h2{
+    float: right;
+  }
+  
+}
